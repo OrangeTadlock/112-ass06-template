@@ -75,6 +75,7 @@ float add(float a, float b)
     /* TODO: Return a + b; */
     float add = a + b;
     return add;
+    
 }
 
 float sub(float a, float b)
@@ -182,6 +183,6 @@ void init_calc(struct Calc *calc)
     calc->sub = sub;
     calc->mul = mul;
     calc->div = divide;
-    
+
 
 }

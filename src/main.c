@@ -41,5 +41,5 @@ int main(void)
     printf("calc.add(10, 5) = %f\n", calc.add(calc.a, calc.b));
     printf("calc.mul(10, 5) = %f\n", calc.mul(calc.a, calc.b));
 
-    return 0;
+    return 0;/* */
 }
