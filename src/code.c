@@ -1,4 +1,4 @@
-//char *AUTHOR_NAME        = (char *) "Your Name";
+//char *AUTHOR_NAME        = (char *) "Brayden Tadlock";
 //char *AUTHOR_AUTHORSHIP  = (char *) "I acknowledge that I have worked on this
 // assignment independently, except where explicitly noted and referenced.
 // Any collaboration or use of external resources has been properly cited.
@@ -39,7 +39,9 @@
 void init_int_point(struct int_Point *point, int x, int y)
 {
     /* TODO: Set point->x = x; */
+    point-> x = x;
     /* TODO: Set point->y = y; */
+    point-> y = y;
 }
 
 /*
@@ -55,7 +57,9 @@ void init_int_point(struct int_Point *point, int x, int y)
 void init_double_point(struct double_Point *point, double x, double y)
 {
     /* TODO: Set point->x = x; */
+    point-> x = x;
     /* TODO: Set point->y = y; */
+    point-> y = y;
 }
 
 /*
@@ -69,21 +73,28 @@ void init_double_point(struct double_Point *point, double x, double y)
 float add(float a, float b)
 {
     /* TODO: Return a + b; */
+    float add = a + b;
+    return add;
 }
 
 float sub(float a, float b)
 {
     /* TODO: Return a - b; */
+    float sub = a - b;
+    return sub;
 }
 
 float mul(float a, float b)
 {
-    /* TODO: Return a * b; */
+    float mul = a * b;
+    return mul;
 }
 
 float divide(float a, float b)
 {
     /* TODO: Return a / b; (handle division by zero if needed) */
+    float div = a / b;
+    return div;
 }
 
 /*
@@ -112,7 +123,15 @@ float divide(float a, float b)
 
 double apply_operation(float *arr, int length, float (*operation)(float, float))
 {
-    /* TODO: */
+
+    double result = arr[0];
+    int i =0;
+    for(i=1; i < length - 1; i++)
+        {
+            result = operation(result, arr[i]);
+            return result;
+        }
+    return 0;
 }
 
 /*
@@ -125,10 +144,13 @@ double apply_operation(float *arr, int length, float (*operation)(float, float))
  * Same as Step 2, but uses the DoublePoint typedef
  */
 
-// void init_double_point_typedef(DoublePoint *point, double x, double y)
-// {
-//     /* TODO:*/
-// }
+void init_double_point_typedef(DoublePoint *point, double x, double y)
+{
+      /* TODO: Set point->x = x; */
+    point-> x = x;
+    /* TODO: Set point->y = y; */
+    point-> y = y;
+}
 
 /*
  * ============================================================================
@@ -154,5 +176,12 @@ double apply_operation(float *arr, int length, float (*operation)(float, float))
 
 void init_calc(struct Calc *calc)
 {
-    /* TODO */
+    calc->a = 0.0f;
+    calc->b = 0.0f;
+    calc->add = add;
+    calc->sub = sub;
+    calc->mul = mul;
+    calc->div = divide;
+    
+
 }
