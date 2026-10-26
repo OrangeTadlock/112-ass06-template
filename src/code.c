@@ -35,7 +35,7 @@
  *   init_int_point(&p, 10, 20);
  *   // Now p.x = 10, p.y = 20
  */
-
+ 
 void init_int_point(struct int_Point *point, int x, int y)
 {
     /* TODO: Set point->x = x; */
