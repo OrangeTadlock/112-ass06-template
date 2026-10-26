@@ -124,15 +124,13 @@ float divide(float a, float b)
 
 double apply_operation(float *arr, int length, float (*operation)(float, float))
 {
-
     double result = arr[0];
-    int i =0;
-    for(i=1; i < length - 1; i++)
-        {
-            result = operation(result, arr[i]);
-            return result;
-        }
-    return 0;
+    int i;
+    for (i = 1; i < length; i++)
+    {
+        result = operation(result, arr[i]);
+    }
+    return result;
 }
 
 /*
